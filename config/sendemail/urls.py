@@ -1,9 +1,10 @@
-from django.contrib import admin
 from django.urls import path
+from .views import ContactView, ContactSuccessView
 
-from .views import contactView, successView
+app_name = 'sendemail'
+
 
 urlpatterns = [
-     path('contact/', contactView, name='contact'),
-     path('success/', successView, name='success'),
+     path('', ContactView.as_view(), name="contact"),
+     path('success/', ContactSuccessView.as_view(), name="success"),
 ]

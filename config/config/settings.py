@@ -9,6 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
 import os
 from pathlib import Path
 
@@ -36,12 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'crispy_forms',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
 
-DEFAULT_FROM_EMAIL = 'oshikoyadolapo13@gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 
 MIDDLEWARE = [
@@ -128,3 +133,22 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# bottom of the file
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+#custom setting to email
+RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
+
+
+
+
+
+
+
