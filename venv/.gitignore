@@ -1,0 +1,16 @@
+# created by virtualenv automatically
+#distribution/ packaging
+.Python
+venv/
+env/
+#project asset folders
+media/
+#database
+db.sqlite3
+#Editor directories and files
+.idea
+#Byte-compiled / optimized /DLL
+files
+_pycache_/
+*.py[cod]
+*$py.class
