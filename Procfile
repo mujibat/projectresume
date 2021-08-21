@@ -1,3 +1,3 @@
 web: gunicorn
-wsgi.py.wsgi --log-file
+<wsgi.py>.wsgi --log-file
 -
