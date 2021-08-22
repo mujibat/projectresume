@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l_kuz7ab71^9h)9t2j3&lku#9^86*mi^q$vm-iza&ecnq@i7^&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['<*/projectresumeconfig.git>']
 
