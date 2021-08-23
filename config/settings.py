@@ -50,7 +50,6 @@ INSTALLED_APPS = [
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-x
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
