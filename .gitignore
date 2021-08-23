@@ -1,0 +1,18 @@
+#project exclude paths
+/venv/
+#disribution / packaging
+.Python
+venv/
+env/
+*.sqlite3
+.idea/
+# project asset folders
+media/
+# database
+db.sqlite3
+# editor directories and files
+.idea
+# byte-compiled / optimized / dll files
+__pycache__/
+*.py[cod]
+*$py.class
